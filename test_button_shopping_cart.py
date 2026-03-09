@@ -3,6 +3,13 @@ import allure
 import pytest
 from selenium.webdriver.common.by import By
 
+@allure.id("005")
+@allure.feature("Dodo")
+@allure.label("Api test")
+@allure.title('Проверка работы кнопки "Корзина"')
+@allure.description("Проверка открытия модального окна с корзиной заказа")
+@pytest.mark.dodo_tests
+
 def test_shopping_cart(driver):
     with allure.step('Открываем сайт "ДоДо".'):
         driver.get("https://dodopizza.ru/perm")

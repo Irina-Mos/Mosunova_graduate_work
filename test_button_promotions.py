@@ -1,8 +1,13 @@
-import time
 import allure
 import pytest
 from selenium.webdriver.common.by import By
 
+@allure.id("004")
+@allure.feature("Dodo")
+@allure.label("Api test")
+@allure.title('Проверка работы кнопки "Акции"')
+@allure.description("Проверка открытия страницы с акциями")
+@pytest.mark.dodo_tests
 
 
 def test_promotions(driver):
