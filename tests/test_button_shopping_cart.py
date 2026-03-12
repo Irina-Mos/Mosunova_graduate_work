@@ -2,6 +2,7 @@ import time
 import allure
 import pytest
 from selenium.webdriver.common.by import By
+from pages.page_main import MainPage
 
 @allure.id("005")
 @allure.feature("Dodo")
@@ -12,7 +13,8 @@ from selenium.webdriver.common.by import By
 
 def test_shopping_cart(driver):
     with allure.step('Открываем сайт "ДоДо".'):
-        driver.get("https://dodopizza.ru/perm")
+        web = MainPage(driver)
+        web.open()
     with allure.step('Нажимаем на кнопку "Корзина".'):
         shp_cart = driver.find_element(By.XPATH, "//button[@class='sc-18x94tv-0 hNSEqk sc-1uavg9b-11 eETFSt']")
         shp_cart.click()

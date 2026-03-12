@@ -1,6 +1,6 @@
 import allure
 import pytest
-from selenium.webdriver.common.by import By
+from pages.page_main import MainPage
 
 @allure.id("004")
 @allure.feature("Dodo")
@@ -12,10 +12,10 @@ from selenium.webdriver.common.by import By
 
 def test_promotions(driver):
     with allure.step('Открываем сайт "ДоДо".'):
-        driver.get("https://dodopizza.ru/perm")
+        web = MainPage(driver)
+        web.open()
     with allure.step('Проверка работы кнопки "Акции".'):
-        promotions = driver.find_element(By.XPATH, "//a[@class='sc-1c0ft0g-0 gHYwAJ sc-1uavg9b-6 bqLRwB']")
-        promotions.click()
+        web.select_promotions()
     with allure.step('Проверяем, что открылась страница с акциями.'):
-        assert "bonusactions" in driver.current_url, "Переход на страницу с акциями."
+        assert "bonusactions" in driver.current_url, "Переход на страницу с акциями не произошел."
 
