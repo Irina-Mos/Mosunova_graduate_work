@@ -2,6 +2,7 @@ from  pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 import time
 
+
 class MainPage(BasePage):
     URL = "https://dodopizza.ru/perm"
     MAIN_TABS = (By.XPATH, "//a[@class='sc-1c0ft0g-0 gHYwAJ sc-1uavg9b-7 comGOc']")
@@ -13,6 +14,9 @@ class MainPage(BasePage):
     SHOPPING_CART = (By.XPATH, "//button[@class='sc-18x94tv-0 hNSEqk sc-1uavg9b-11 eETFSt']")
     SHOPPING_CART_MODAL = (By.XPATH, "//main[@class='sc-1gxjiqu-0 dqtuND']")
     SHOPPING_CART_FIELD = (By.XPATH,"//button[@class='button-close']")
+    LIVE_BROADCAST_BUTTON = (By.XPATH, "//a[@class = 'sc-1c0ft0g-0 gHYwAJ sc-1h8wv3w-4 hnsJbe']")
+    LIVE_BROADCAST = (By.XPATH, "//div[@class = 'sc-kfrsub-0 dWySFT']")
+
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -23,7 +27,7 @@ class MainPage(BasePage):
         return self
 
     def check_tabs(self):
-        tabs = self.driver.find_elements(self.MAIN_TABS)
+        tabs = self.wait_elements(self.MAIN_TABS)
         for tab in tabs:
             self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", tab)
             text = tab.text
@@ -47,3 +51,20 @@ class MainPage(BasePage):
 
     def wait_phone_field(self):
         return self.wait_element(self.PHONE_FIELD)
+
+    def click_shp_cart(self):
+        self.click(self.SHOPPING_CART)
+        time.sleep(3)
+
+    def wait_shp_cart_modal(self):
+        return self.wait_element(self.SHOPPING_CART_MODAL)
+
+    def wait_shp_cart_field(self):
+        return self.wait_element(self.SHOPPING_CART_FIELD)
+
+    def click_live_broadcast_button(self):
+        self.click(self.LIVE_BROADCAST_BUTTON)
+        time.sleep(3)
+
+    def wait_live_broadcast(self):
+        return self.wait_element(self.LIVE_BROADCAST)

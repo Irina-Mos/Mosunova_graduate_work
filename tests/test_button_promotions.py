@@ -3,8 +3,7 @@ import pytest
 from pages.page_main import MainPage
 
 @allure.id("004")
-@allure.feature("Dodo")
-@allure.label("Api test")
+@allure.label("Dodo")
 @allure.title('Проверка работы кнопки "Акции"')
 @allure.description("Проверка открытия страницы с акциями")
 @pytest.mark.dodo_tests

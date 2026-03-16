@@ -10,6 +10,9 @@ class BasePage:
     def wait_element(self, locator):
         return self.wait.until(EC.visibility_of_element_located(locator))
 
+    def wait_elements(self, locator):
+        return self.wait.until(EC.visibility_of_all_elements_located(locator))
+
 
     def click(self, locator):
         return self.wait_element(locator).click()
