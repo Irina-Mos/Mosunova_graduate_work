@@ -1,5 +1,6 @@
 from  pages.base_page import BasePage
 from selenium.webdriver.common.by import By
+from locators.main_page_locators import MainPageLocators
 import time
 
 
@@ -16,14 +17,15 @@ class MainPage(BasePage):
     SHOPPING_CART_FIELD = (By.XPATH,"//button[@class='button-close']")
     LIVE_BROADCAST_BUTTON = (By.XPATH, "//a[@class = 'sc-1c0ft0g-0 gHYwAJ sc-1h8wv3w-4 hnsJbe']")
     LIVE_BROADCAST = (By.XPATH, "//div[@class = 'sc-kfrsub-0 dWySFT']")
+    COMBO = (By.XPATH, "//h2[text()='Комбо']")
 
 
     def __init__(self, driver):
         super().__init__(driver)
-        self.driver = driver
+        self.locators = MainPageLocators()
 
     def open(self):
-        self.driver.get(self.URL)
+        self.driver.get(self.locators.URL)
         return self
 
     def check_tabs(self):
@@ -68,3 +70,6 @@ class MainPage(BasePage):
 
     def wait_live_broadcast(self):
         return self.wait_element(self.LIVE_BROADCAST)
+
+    def scroll_to_combo(self):
+        return self.scroll_to_element(self.COMBO)

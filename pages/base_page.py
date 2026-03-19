@@ -1,14 +1,32 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
+from time import sleep
 import allure
 
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver, 10)
+        self.global_timeout = 10
+        self.wait = WebDriverWait(driver, self.global_timeout)
 
     def wait_element(self, locator):
         return self.wait.until(EC.visibility_of_element_located(locator))
+
+    def scroll_to_element(self, locator, attempts=5):
+        self.global_timeout = 2
+        element = None
+        counter = 0
+        while counter < attempts:
+            self.driver.execute_script("window.scrollBy(0, 900);")
+            sleep(1)
+            try:
+                element = self.wait.until(EC.visibility_of_element_located(locator))
+                return element
+            except TimeoutException:
+                counter += 1
+                continue
+        return element
 
     def wait_elements(self, locator):
         return self.wait.until(EC.visibility_of_all_elements_located(locator))
