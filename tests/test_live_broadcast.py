@@ -5,7 +5,7 @@ from pages.page_main import MainPage
 @allure.id("006")
 @allure.label("Dodo")
 @allure.title('Проверка работы кнопки "Прямой эфир" в шапке сайта')
-@allure.description("Проверка запуска видео прямого эфира с кухни одного из филиала сети пиццерий.")
+@allure.description("Проверка запуска видео прямого эфира с кухни одного из филиалов сети пиццерий.")
 @pytest.mark.dodo_tests
 
 def test_live_broadcast(driver):
