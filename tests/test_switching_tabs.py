@@ -14,7 +14,5 @@ def test_tabs(driver):
         web = MainPage(driver)
         web.open()
     with allure.step('Проверка переключения между вкладками.'):
-        web.scroll_to_combo()
-        pass
-        # web.check_tabs()
+        web.check_tabs()
 
