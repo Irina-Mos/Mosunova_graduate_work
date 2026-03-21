@@ -69,3 +69,23 @@ class MainPage(BasePage):
 
     def wait_live_broadcast(self):
         return self.wait_element(self.locators.LIVE_BROADCAST)
+
+    def select_work_in_dodo(self):
+        self.click(self.locators.WORK_IN_DODO)
+
+    def select_about_us(self):
+        self.click(self.locators.ABOUT_US)
+
+    def select_contacts(self):
+        self.click(self.locators.CONTACTS)
+
+    def select_corporate_orders(self):
+        self.click(self.locators.CORPORATE_ORDERS)
+
+    def wait_corporate_order_modal(self):
+        return self.wait_element(self.locators.CORPORATE_ORDERS_MODAL)
+
+    def select_sertifies_for_business(self):
+        self.click(self.locators.SERTIFICATES_FOR_BUSINESS)
+
+

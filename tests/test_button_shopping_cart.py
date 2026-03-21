@@ -1,7 +1,5 @@
-import time
 import allure
 import pytest
-from selenium.webdriver.common.by import By
 from pages.page_main import MainPage
 
 @allure.id("005")

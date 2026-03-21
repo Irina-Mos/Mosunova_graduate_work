@@ -13,7 +13,7 @@ def test_promotions(driver):
     with allure.step('Открываем сайт "ДоДо".'):
         web = MainPage(driver)
         web.open()
-    with allure.step('Проверка работы кнопки "Акции".'):
+    with allure.step('Нажимаем на кнопку "Акции".'):
         web.select_promotions()
     with allure.step('Проверяем, что открылась страница с акциями.'):
         assert "bonusactions" in driver.current_url, "Переход на страницу с акциями не произошел."

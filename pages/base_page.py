@@ -25,3 +25,6 @@ class BasePage:
             attachment_type=allure.attachment_type.PNG
         )
 
+    def select_window(self, num_windows=int):
+        windows = self.driver.window_handles
+        self.driver.switch_to.window(windows[num_windows])
