@@ -85,7 +85,7 @@ class MainPage(BasePage):
     def wait_corporate_order_modal(self):
         return self.wait_element(self.locators.CORPORATE_ORDERS_MODAL)
 
-    def select_sertifies_for_business(self):
+    def select_sertificates_for_business(self):
         self.click(self.locators.SERTIFICATES_FOR_BUSINESS)
 
 
