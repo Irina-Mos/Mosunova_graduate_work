@@ -23,7 +23,7 @@ dodo_project/
 │   ├── test_button_promotions.py           #     Тест кнопки "Акции"
 │   ├── test_button_shopping_cart.py        #     Тест кнопки "Корзина"
 │   ├── test_contacts.py                    #     Тест кнопки "Контакты"
-│   ├── test_corporation_order.py           #     Тест кнопки "орпоративные заказы"
+│   ├── test_corporation_order.py           #     Тест кнопки "Корпоративные заказы"
 │   ├── test_live_broadcast.py              #     Тест кнопки "Прямой эфир"
 │   ├── test_sertificates_for_business.py   #     Тест кнопки "Сертификаты для бизнеса"
 │   ├── test_switching_tabs.py              #     Тест переключение между вкладками меню 
