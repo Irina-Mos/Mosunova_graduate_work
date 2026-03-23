@@ -8,7 +8,7 @@ class MainPageLocators:
     DODOCOINS = (By.XPATH, "//a[@href='/perm/loyaltyprogram']")
     LOGIN_BUTTON = (By.XPATH, "//button[@class='sc-18x94tv-0 bHRGrp']")
     LOGIN_MODAL = (By.XPATH, "//div[@class='sc-1ne9bn6-0 cBbDbs sc-17puf9f-0 kWAHdh']")
-    PHONE_FIELD = (By.XPATH,"//div[@class='sc-8yov1q-0 rExVf']")
+    PHONE_FIELD = (By.XPATH,"//div[@class='sc-8yov1q-0 huaqOI']")
     SHOPPING_CART = (By.XPATH, "//button[@class='sc-18x94tv-0 bHRGrp sc-1uavg9b-11 kFoTqd']")
     SHOPPING_CART_MODAL = (By.XPATH, "//main[@class='sc-1gxjiqu-0 gbQRcz']")
     SHOPPING_CART_FIELD = (By.XPATH,"//button[@class='button-close']")
