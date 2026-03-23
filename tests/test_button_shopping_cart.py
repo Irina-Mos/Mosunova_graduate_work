@@ -21,7 +21,6 @@ def test_shopping_cart(driver):
         load_time = end_time - start_time
 
     allure.step(f"Страница загрузилась за: {load_time:.2f} сек.")
-    # assert load_time < 60.0, f"Сайт загружается слишком долго: {load_time} сек."
 
     with allure.step('Нажимаем на кнопку "Корзина".'):
         web.click_shp_cart()
