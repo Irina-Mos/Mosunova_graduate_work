@@ -5,7 +5,8 @@ import allure
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver, 10)
+        self.global_timeout = 10
+        self.wait = WebDriverWait(driver, self.global_timeout)
 
     def wait_element(self, locator):
         return self.wait.until(EC.visibility_of_element_located(locator))
@@ -24,3 +25,6 @@ class BasePage:
             attachment_type=allure.attachment_type.PNG
         )
 
+    def select_window(self, num_windows=int):
+        windows = self.driver.window_handles
+        self.driver.switch_to.window(windows[num_windows])

@@ -2,18 +2,13 @@ import allure
 import pytest
 from pages.page_main import MainPage
 
-from selenium import webdriver
-
-driver = webdriver.Chrome()
-fr = driver
-
 @allure.id("006")
 @allure.label("Dodo")
-@allure.title("Проверка кнопок в шапке сайта")
-@allure.description("Проверка перехода по соответствующим ссылкам при нажатии кнопок в шапке сайта")
+@allure.title('Проверка работы кнопки "Прямой эфир" в шапке сайта')
+@allure.description("Проверка запуска видео прямого эфира с кухни одного из филиалов сети пиццерий.")
 @pytest.mark.dodo_tests
 
-def test_tabs(driver):
+def test_live_broadcast(driver):
     with allure.step('Открываем сайт "ДоДо".'):
         web = MainPage(driver)
         web.open()
