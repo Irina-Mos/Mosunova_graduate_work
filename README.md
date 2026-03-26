@@ -35,6 +35,10 @@ dodo_project/
 │   ├── base_page.py                        #     Базовый класс (общие методы для всех страниц)
 │   └── main_page.py                        #     Главная страница
 │
+│
+├── test-plan                               #  Тест-план
+│
+│
 ├── tests/                                  # ✅ Тесты
 │   ├── test_about_us.py                    #     Тест кнопки "О нас"
 │   ├── test_button_dodocoins.py            #     Тест кнопки "Додокоины"
