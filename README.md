@@ -25,7 +25,7 @@ dodo_project/
 ├──allure_results/                          #  Allure-Отчет(allure serve allure_results)
 │
 │
-├──checklist_and_test_cases                 #  Чек-лист и тест-кейсы
+├──cheklist_&_test_cases_&_bug_reports      #  Чек-лист, тест-кейсы и баг-репорты
 │
 │
 ├──locators                                 # Переменные (локаторы)
@@ -37,6 +37,9 @@ dodo_project/
 │
 │
 ├── test-plan                               #  Тест-план
+│
+│
+├── test_summary_report                     #  Итоговый отчет о тестировании
 │
 │
 ├── tests/                                  # ✅ Тесты

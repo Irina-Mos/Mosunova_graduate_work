@@ -1,0 +1,1 @@
+{"name": "Проверка работы кнопки \"Акции\"", "status": "skipped", "description": "Проверка открытия страницы с акциями", "start": 1774685503570, "stop": 1774685503570, "uuid": "1eb7c58e-865e-4fb7-8f50-aec69517e35c", "testCaseId": "29bd04f9d34a39f6f8cdb5c94cf2830c", "fullName": "tests.test_button_promotions#test_promotions", "titlePath": ["tests", "test_button_promotions.py"]}
