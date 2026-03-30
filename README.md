@@ -72,6 +72,7 @@ from pages.page_main import MainPage
 @allure.title('Проверка работы кнопки "Корзина"')       # Название теста
 @allure.description("Проверка открытия модального окна с корзиной заказа")      # Описание теста
 @pytest.mark.dodo_tests     # Присвоение метки для запуска группы тестов с этой меткой (команда pytest -m dodo_tests)
+@pytest.mark.parametrize("driver", ["Edge", "Chrome"], indirect=True) # Параметризация. Проведение тестов в браузерах Edge и Chrome
 # Объявление функции теста
 def test_shopping_cart(driver):
     with allure.step('Открываем сайт "ДоДо".'):     # Начинает блок шага в отчете Allure
