@@ -7,7 +7,7 @@ from pages.page_main import MainPage
 @allure.title('Проверка работы кнопки "Работа в Додо" в шапке сайта')
 @allure.description("Проверка открытия страницы с вакансиями.")
 @pytest.mark.dodo_tests
-
+@pytest.mark.parametrize("driver", ["Edge", "Chrome"], indirect=True)
 def test_work(driver):
     with allure.step('Открываем сайт "ДоДо".'):
         web = MainPage(driver)

@@ -7,7 +7,7 @@ from pages.page_main import MainPage
 @allure.title('Проверка работы кнопки "Корзина"')
 @allure.description("Проверка открытия модального окна с корзиной заказа")
 @pytest.mark.dodo_tests
-
+@pytest.mark.parametrize("driver", ["Edge", "Chrome"], indirect=True)
 def test_shopping_cart(driver):
     with allure.step('Открываем сайт "ДоДо".'):
         web = MainPage(driver)

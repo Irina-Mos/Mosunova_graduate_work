@@ -7,7 +7,7 @@ from pages.page_main import MainPage
 @allure.title('Проверка работы кнопки "Сертификаты для бизнеса" в шапке сайта')
 @allure.description("Проверка открытия страницы с сертификатвми для бизнеса.")
 @pytest.mark.dodo_tests
-
+@pytest.mark.parametrize("driver", ["Edge", "Chrome"], indirect=True)
 def test_sert_for_business(driver):
     with allure.step('Открываем сайт "ДоДо".'):
         web = MainPage(driver)

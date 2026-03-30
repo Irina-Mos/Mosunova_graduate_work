@@ -7,7 +7,7 @@ from pages.page_main import MainPage
 @allure.title('Проверка работы кнопки "Прямой эфир" в шапке сайта')
 @allure.description("Проверка запуска видео прямого эфира с кухни одного из филиалов сети пиццерий.")
 @pytest.mark.dodo_tests
-
+@pytest.mark.parametrize("driver", ["Edge", "Chrome"], indirect=True)
 def test_live_broadcast(driver):
     with allure.step('Открываем сайт "ДоДо".'):
         web = MainPage(driver)

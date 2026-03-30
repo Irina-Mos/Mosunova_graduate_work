@@ -7,7 +7,7 @@ from pages.page_main import MainPage
 @allure.title('Проверка работы кнопки "Корпоративные заказы"')
 @allure.description("Проверка открытия модального окна с созданием корпоративного профиля.")
 @pytest.mark.dodo_tests
-
+@pytest.mark.parametrize("driver", ["Edge", "Chrome"], indirect=True)
 def test_corp_order(driver):
     with allure.step('Открываем сайт "ДоДо".'):
         web = MainPage(driver)
