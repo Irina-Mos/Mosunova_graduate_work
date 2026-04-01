@@ -4,6 +4,8 @@ from selenium.webdriver.common.by import By
 class MainPageLocators:
     URL = "https://dodopizza.ru/perm"
     MAIN_TABS = (By.XPATH, "//a[@class='sc-1c0ft0g-0 gHYwAJ sc-1uavg9b-7 comGOc']")
+    MAIN_TABS_MORE = (By.XPATH, "//div[@class='sc-1mmqhln-2 dPYdTk']")
+    MAIN_TABS_DOP = (By.XPATH, "//li[@class='sc-1mmqhln-4 hPvPrY']")
     PROMOTIONS = (By.XPATH, "//a[@class='sc-1c0ft0g-0 gHYwAJ sc-1uavg9b-6 bqLRwB']")
     DODOCOINS = (By.XPATH, "//a[@href='/perm/loyaltyprogram']")
     LOGIN_BUTTON = (By.XPATH, "//button[@class='sc-18x94tv-0 bHRGrp']")

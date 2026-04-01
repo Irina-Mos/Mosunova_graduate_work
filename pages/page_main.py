@@ -23,6 +23,15 @@ class MainPage(BasePage):
             title = self.driver.find_element(By.XPATH, f"//h2[text()='{text}']")
             assert text == title.text
             time.sleep(3)
+        more = self.click(self.locators.MAIN_TABS_MORE)
+        tabs_more = self.wait_elements(self.locators.MAIN_TABS_DOP)
+        for tab in tabs_more:
+            more = self.click(self.locators.MAIN_TABS_MORE)
+            tab.click()
+            title = self.driver.find_element(By.XPATH, f"//h2[text()='{text}']")
+            assert text == title.text
+            time.sleep(3)
+
 
     def select_promotions(self):
         self.click(self.locators.PROMOTIONS)
